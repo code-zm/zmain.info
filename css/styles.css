@@ -104,8 +104,22 @@ footer {
     white-space: pre;
     overflow: hidden;
     border-right: 3px solid;
-    display: inline-block;
+    display: inline;
     animation: blink-caret 0.75s step-end infinite;
+    max-width: 100%;
+}
+
+/* Code Snippet Box Styling */
+.code-box {
+    background-color: #1e1e1e; /* Dark background to mimic a code editor */
+    color: #cfcfcf; /* Light text color for readability */
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 600px; /* Set a consistent width for the code box */
+    margin: 0 auto; /* Center the box horizontally */
+    text-align: left; /* Align text to the left within the box */
+    font-family: monospace;
+    overflow: hidden;
 }
 
 
