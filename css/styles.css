@@ -115,12 +115,16 @@ footer {
     color: #cfcfcf; /* Light text color for readability */
     padding: 1rem;
     border-radius: 8px;
-    max-width: 600px; /* Set a consistent width for the code box */
+    max-width: 600px; /* Fixed width for consistent alignment */
+    max-height: 200px; /* Fixed height to prevent page expansion */
     margin: 0 auto; /* Center the box horizontally */
     text-align: left; /* Align text to the left within the box */
     font-family: monospace;
-    overflow: hidden;
+    overflow: hidden; /* Hide any overflow initially */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+    box-sizing: border-box; /* Ensures padding is included in the height */
 }
+
 
 
 
