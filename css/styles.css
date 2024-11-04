@@ -88,44 +88,21 @@ footer {
     background-color: rgba(255, 255, 255, 0.05); /* Subtle color change on focus/hover */
 }
 
-/* Typing animation CSS */
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-@keyframes blink-caret {
-    50% { border-color: transparent; }
-}
-
-.typing-text {
+/* Interactive Name Styling */
+.interactive-name {
     font-family: monospace;
-    font-size: 1rem;
-    line-height: 1;
-    white-space: pre; /* Keeps all spaces, line breaks, and indentation */
-    overflow: hidden;
-    border-right: 2px solid; /* Blinking cursor */
-    display: inline; /* Ensures the cursor follows each character naturally */
-    animation: blink-caret 0.75s step-end infinite;
-    max-width: 100%;
-}
-
-/* Code Snippet Box Styling */
-.code-box {
-    background-color: #1e1e1e; /* Dark background to mimic a code editor */
-    color: #cfcfcf; /* Light text color for readability */
-    padding: 1rem;
-    border-radius: 8px;
-    width: 600px; /* Fixed width for consistent alignment */
-    height: 200px; /* Fixed height to prevent page expansion */
-    margin: 0 auto; /* Center the box horizontally */
-    text-align: left; /* Align text to the left within the box */
-    font-family: monospace;
-    overflow: hidden; /* Hide any overflow initially */
-    overflow-y: hidden; /* Hides the scrollbar */
+    font-size: 3rem;
+    color: #ffffff; /* Base color */
     position: relative;
-    box-sizing: border-box; /* Ensures padding is included in the height */
+    display: inline-block;
+    transition: color 0.2s ease;
+    background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.25) 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: background-position 0.05s ease-out;
 }
+
 
 
 
