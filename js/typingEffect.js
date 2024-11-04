@@ -45,8 +45,8 @@ void printList(struct Node* n) {
 
 let snippetIndex = 0;
 let charIndex = 0;
-const typingSpeed = 100;  // milliseconds per character
-const delayBetweenSnippets = 750;  // delay before typing the next snippet
+const typingSpeed = 30;  // milliseconds per character
+const delayBetweenSnippets = 300;  // delay before typing the next snippet
 const typingTextElement = document.getElementById('typing-text');
 const codeBox = document.querySelector('.code-box'); // Reference to the code box
 
