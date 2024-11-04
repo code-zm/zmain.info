@@ -1,13 +1,46 @@
 const cSnippets = [
-    'printf("Hello, World!\\n");',
-    'for(int i = 0; i < 10; i++) { printf("%d ", i); }',
-    'int fibonacci(int n) { return n <= 1 ? n : fibonacci(n-1) + fibonacci(n-2); }',
-    'struct Node { int data; struct Node *next; };',
-    'void quicksort(int arr[], int low, int high) { /* ... */ }',
-    'int binarySearch(int arr[], int x) { /* binary search algorithm */ }',
-    'printf("Sorting array...");',
-    'while(head != NULL) { printf("%d ", head->data); head = head->next; }',
-    'int factorial(int n) { return n <= 1 ? 1 : n * factorial(n - 1); }'
+    `#include <stdio.h>
+int main() {
+    printf("Hello, World!\\n");
+    return 0;
+}`,
+
+    `int fibonacci(int n) {
+    if (n <= 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}`,
+
+    `void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n-1; i++)
+        for (int j = 0; j < n-i-1; j++)
+            if (arr[j] > arr[j+1]) {
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+}`,
+
+    `struct Node {
+    int data;
+    struct Node* next;
+};
+void printList(struct Node* n) {
+    while (n != NULL) {
+        printf("%d ", n->data);
+        n = n->next;
+    }
+}`,
+
+    `int binarySearch(int arr[], int size, int target) {
+    int left = 0, right = size - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target) return mid;
+        else if (arr[mid] < target) left = mid + 1;
+        else right = mid - 1;
+    }
+    return -1;
+}`
 ];
 
 let snippetIndex = 0;

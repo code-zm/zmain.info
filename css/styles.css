@@ -100,8 +100,8 @@ footer {
 
 .typing-text {
     font-family: monospace;
-    font-size: 1.5rem;
-    white-space: nowrap;
+    font-size: 1rem;
+    white-space: pre;
     overflow: hidden;
     border-right: 3px solid;
     display: inline-block;
