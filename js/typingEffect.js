@@ -11,12 +11,12 @@ int main() {
 }`,
 
     `void bubbleSort(int arr[], int n) {
-    for (int i = 0; i < n-1; i++)
-        for (int j = 0; j < n-i-1; j++)
-            if (arr[j] > arr[j+1]) {
+    for (int i = 0; i < n - 1; i++)
+        for (int j = 0; j < n - i - 1; j++)
+            if (arr[j] > arr[j + 1]) {
                 int temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
             }
 }`,
 
@@ -48,11 +48,16 @@ let charIndex = 0;
 const typingSpeed = 100;  // milliseconds per character
 const delayBetweenSnippets = 2000;  // delay before typing the next snippet
 const typingTextElement = document.getElementById('typing-text');
+const codeBox = document.querySelector('.code-box'); // Reference to the code box
 
 function typeSnippet() {
     if (charIndex < cSnippets[snippetIndex].length) {
         typingTextElement.textContent += cSnippets[snippetIndex].charAt(charIndex);
         charIndex++;
+
+        // Scroll to the bottom as new characters are added
+        codeBox.scrollTop = codeBox.scrollHeight;
+
         setTimeout(typeSnippet, typingSpeed);
     } else {
         // Pause, then clear and move to the next snippet
